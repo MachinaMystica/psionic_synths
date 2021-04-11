@@ -1,0 +1,77 @@
+# Psionic Armies Synth
+ps_psionic_army = {
+	damage = 2.0
+	morale_damage = 1.5
+	health = 1.75
+	morale = 2.5
+	collateral_damage = 0.5
+	war_exhaustion = 3.0
+	time = 120
+	icon_frame = 9
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 250
+		}
+
+		upkeep = {
+			energy = 2.5
+		}
+	}
+
+	prerequisites = { "tech_telepathy" }
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				AND = {
+					has_trait = "trait_mechanical"
+					has_trait = trait_psionic
+				}
+			}
+			NOT = {
+				is_sapient = no
+			}
+		}
+	}
+}
+
+# Psionic Armies Machine
+ps_machine_psionic_army = {
+	damage = 2.0
+	morale_damage = 1.5
+	health = 1.75
+	has_morale = no
+	collateral_damage = 0.5
+	war_exhaustion = 3.0
+	time = 120
+	icon_frame = 9
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 250
+		}
+
+		upkeep = {
+			energy = 2.5
+		}
+	}
+
+	prerequisites = { "tech_psysyn_empyreal_transfers" }
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				AND = {
+					has_trait = "trait_machine_unit"
+					has_trait = trait_psionic
+				}
+			}
+			NOT = {
+				is_sapient = no
+			}
+		}
+	}
+}

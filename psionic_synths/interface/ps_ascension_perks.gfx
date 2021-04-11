@@ -1,0 +1,14 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ap_synthetic_transcendence"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_synthetic_ascension.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_ap_machine_transcendence"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_synthetic_ascension.dds"
+		alwaystransparent = yes
+	}
+}

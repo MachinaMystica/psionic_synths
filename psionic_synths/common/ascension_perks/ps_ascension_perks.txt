@@ -1,0 +1,79 @@
+ap_synthetic_transcendence = {
+	on_enabled = {
+		custom_tooltip = "synthetic_transcendence_tooltip"
+		hidden_effect = {
+			country_event = { id = psysyn.13 }
+		}
+		add_research_option = tech_telepathy
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "hive_mind_biological_ascension_only1"
+			NOT = { has_authority = auth_hive_mind }
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 2
+		}
+		custom_tooltip = {
+			fail_text = "requires_ap_synthetic_evolution"
+			has_ascension_perk = ap_synthetic_evolution
+		}
+		custom_tooltip = {
+			fail_text = "requires_technology_psionic_theory"
+			has_technology = tech_psionic_theory
+		}
+	}
+
+	potential = {
+		host_has_dlc = "Utopia"
+		NOT = {
+			has_ascension_perk = ap_synthetic_transcendence
+			has_authority = "auth_machine_intelligence"
+		}
+		is_cyborg_empire = no
+		is_ai = no
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_machine_transcendence = {
+	on_enabled = {
+		custom_tooltip = "machine_transcendence_tooltip"
+		hidden_effect = {
+			country_event = { id = psysyn.14 }
+		}
+		add_research_option = tech_psysyn_empyreal_transfers
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 2
+		}
+		custom_tooltip = {
+			fail_text = "requires_ap_synthetic_age"
+			has_ascension_perk = ap_synthetic_age
+		}
+		custom_tooltip = {
+			fail_text = "requires_technology_existential_algorithms"
+			has_technology = tech_psysyn_existential_algorithms
+		}
+	}
+
+	potential = {
+		host_has_dlc = "Utopia"
+		host_has_dlc = "Synthetic Dawn Story Pack"
+		has_authority = auth_machine_intelligence
+		NOT = {
+			has_ascension_perk = ap_machine_transcendence
+		}
+		is_ai = no
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
